@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Images\navigation_background_dark.png" />
+     <Resource Include="Images\navigation_background_light.png" />
+     <Content Include="Images\ctrl_bttn_LB.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ctrl_bttn_RB.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+     <Content Include="Images\ctrl_bttn_B.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ctrl_bttn_A.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ctrl_bttn_guide.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+</ItemGroup>
+
+
+
+</Project>

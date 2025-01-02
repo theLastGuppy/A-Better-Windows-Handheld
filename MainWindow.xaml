@@ -1,0 +1,104 @@
+﻿<Window x:Class="GamingOverlay.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GamingOverlay" Height="1080" Width="1920"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Topmost="True" ResizeMode="NoResize">
+    <Grid>
+        <!-- Main Overlay Background -->
+        <Grid Background="Transparent">
+
+            <!-- Debug Rectangle for Background Image -->
+            <Rectangle x:Name="BackgroundImageRectangle" Height="150" 
+                       VerticalAlignment="Bottom"
+                       Margin="0,0,0,44"
+                       Stroke="Red" StrokeThickness="0"
+                       Fill="Transparent">
+            </Rectangle>
+
+            <!-- Navigation Row Content -->
+            <Border Height="120" 
+                    VerticalAlignment="Bottom" 
+                    Margin="0,0,0,44"
+                    Background="Transparent">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <!-- Left Controller Button (LB) -->
+                    <Image Source="Images/ctrl_bttn_LB.png" 
+                           VerticalAlignment="Center"
+                           Height="20"
+                           Margin="0,0,20,0" />
+
+                    <!-- Navigation Buttons -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Content="Game Options" Margin="20,0,20,0"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="White" FontSize="16" FontWeight="Bold" />
+                        <Button Content="Performance" Margin="20,0,20,0"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="White" FontSize="16" FontWeight="Bold" />
+                        <Button Content="Recording" Margin="20,0,20,0"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="White" FontSize="16" FontWeight="Bold" />
+                        <Button Content="Achievements" Margin="20,0,20,0"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="White" FontSize="16" FontWeight="Bold" />
+                        <Button Content="Discord" Margin="20,0,20,0"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="White" FontSize="16" FontWeight="Bold" />
+                    </StackPanel>
+
+                    <!-- Right Controller Button (RB) -->
+                    <Image Source="Images/ctrl_bttn_RB.png" 
+                           VerticalAlignment="Center"
+                           Height="20"
+                           Margin="20,0,0,0" />
+                </StackPanel>
+            </Border>
+
+            <!-- Taskbar Right Section Overlay -->
+            <Border Height="50"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Width="300"
+                    Background="#1C1C1C">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                    <!-- Back Button -->
+                    <Image Source="Images/ctrl_bttn_B.png" 
+                           VerticalAlignment="Center"
+                           Height="20"
+                           Margin="10,0,5,0" />
+                    <TextBlock Text="Back" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="5,0,10,0" />
+
+                    <!-- Select Button -->
+                    <Image Source="Images/ctrl_bttn_A.png" 
+                           VerticalAlignment="Center"
+                           Height="20"
+                           Margin="10,0,5,0" />
+                    <TextBlock Text="Select" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="5,0,10,0" />
+                </StackPanel>
+            </Border>
+
+            <!-- Taskbar Left Section Overlay -->
+            <Border Height="50"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left"
+                    Width="150"
+                    Background="Transparent">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+                    <!-- Guide Button -->
+                    <Image Source="Images/ctrl_bttn_guide.png" 
+                           VerticalAlignment="Center"
+                           Height="20"
+                           Margin="10,0,5,0" />
+                    <TextBlock Text="Close" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="5,0,0,0" />
+                </StackPanel>
+            </Border>
+
+            <!-- Transparent Taskbar Cutout -->
+            <Rectangle Height="50" 
+                       VerticalAlignment="Bottom" 
+                       Fill="Transparent"
+                       IsHitTestVisible="False" />
+        </Grid>
+    </Grid>
+</Window>
