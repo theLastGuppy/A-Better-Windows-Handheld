@@ -5,23 +5,38 @@
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         Topmost="True" ResizeMode="NoResize">
     <Grid>
+        <!-- Partial Screen Overlay -->
+        <Rectangle x:Name="PartialScreenOverlay"
+                   Fill="Black" Opacity="0.5"
+                   Visibility="Collapsed"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   Margin="0,0,0,120" /> <!-- Leaves space for navigation buttons -->
+
         <!-- Main Overlay Background -->
         <Grid Background="Transparent">
-
             <!-- Debug Rectangle for Background Image -->
             <Rectangle x:Name="BackgroundImageRectangle" Height="150" 
                        VerticalAlignment="Bottom"
                        Margin="0,0,0,44"
                        Stroke="Red" StrokeThickness="0"
-                       Fill="Transparent">
-            </Rectangle>
+                       Fill="Transparent" />
+
+            <!-- Dynamic Content Area -->
+            <Frame x:Name="FrameContent"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width="800"
+                   Height="600"
+                   Visibility="Visible"
+                   NavigationUIVisibility="Hidden"/>
 
             <!-- Navigation Row Content -->
             <Border Height="120" 
                     VerticalAlignment="Bottom" 
                     Margin="0,0,0,44"
                     Background="Transparent">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel x:Name="NavigationButtonsPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <!-- Left Controller Button (LB) -->
                     <Image Source="Images/ctrl_bttn_LB.png" 
                            VerticalAlignment="Center"
@@ -29,23 +44,21 @@
                            Margin="0,0,20,0" />
 
                     <!-- Navigation Buttons -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Content="Game Options" Margin="20,0,20,0"
-                                Background="Transparent" BorderBrush="Transparent"
-                                Foreground="White" FontSize="16" FontWeight="Bold" />
-                        <Button Content="Performance" Margin="20,0,20,0"
-                                Background="Transparent" BorderBrush="Transparent"
-                                Foreground="White" FontSize="16" FontWeight="Bold" />
-                        <Button Content="Recording" Margin="20,0,20,0"
-                                Background="Transparent" BorderBrush="Transparent"
-                                Foreground="White" FontSize="16" FontWeight="Bold" />
-                        <Button Content="Achievements" Margin="20,0,20,0"
-                                Background="Transparent" BorderBrush="Transparent"
-                                Foreground="White" FontSize="16" FontWeight="Bold" />
-                        <Button Content="Discord" Margin="20,0,20,0"
-                                Background="Transparent" BorderBrush="Transparent"
-                                Foreground="White" FontSize="16" FontWeight="Bold" />
-                    </StackPanel>
+                    <Button Content="Game Options" Margin="20,0,20,0"
+                            Background="Transparent" BorderBrush="Transparent"
+                            Foreground="White" FontSize="16" FontWeight="Bold" />
+                    <Button Content="Performance Profile" Margin="20,0,20,0"
+                            Background="Transparent" BorderBrush="Transparent"
+                            Foreground="White" FontSize="16" FontWeight="Bold" />
+                    <Button Content="Game Recording" Margin="20,0,20,0"
+                            Background="Transparent" BorderBrush="Transparent"
+                            Foreground="White" FontSize="16" FontWeight="Bold" />
+                    <Button Content="Achievements" Margin="20,0,20,0"
+                            Background="Transparent" BorderBrush="Transparent"
+                            Foreground="White" FontSize="16" FontWeight="Bold" />
+                    <Button Content="Discord" Margin="20,0,20,0"
+                            Background="Transparent" BorderBrush="Transparent"
+                            Foreground="White" FontSize="16" FontWeight="Bold" />
 
                     <!-- Right Controller Button (RB) -->
                     <Image Source="Images/ctrl_bttn_RB.png" 
@@ -54,8 +67,7 @@
                            Margin="20,0,0,0" />
                 </StackPanel>
             </Border>
-
-            <!-- Taskbar Right Section Overlay -->
+             <!-- Taskbar Right Section Overlay -->
             <Border Height="50"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
@@ -86,11 +98,15 @@
                     Background="Transparent">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
                     <!-- Guide Button -->
-                    <Image Source="Images/ctrl_bttn_guide.png" 
-                           VerticalAlignment="Center"
-                           Height="20"
-                           Margin="10,0,5,0" />
-                    <TextBlock Text="Close" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="5,0,0,0" />
+<Image Source="Images/ctrl_bttn_guide.png"
+       VerticalAlignment="Center"
+       Height="20"
+       Margin="10,0,5,0" />
+<TextBlock Text="Close" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="5,0,0,0" />
+<Button x:Name="GuideButton"
+        Content="Guide"
+        Width="0" Height="0" Visibility="Collapsed"
+        Click="GuideButton_Click" />
                 </StackPanel>
             </Border>
 

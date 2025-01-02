@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GamingOverlay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a0976f6aee9127ffed4ecd4eb27fe58faa0189b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GamingOverlay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GamingOverlay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 C:\Users\scree\GamingOverlay\App.xaml
-21611351110
-5-1537589090
-4-184827743
-201668129756
-MainWindow.xaml;Themes\Generic.xaml;
+7-150647181
+7-411667572
+91694391978
+203-1157775737
+MainWindow.xaml;Pages\GameOptionsPage.xaml;Pages\PerformancePage.xaml;Pages\DiscordPage.xaml;Pages\RecordingsPage.xaml;Pages\AchievementsPage.xaml;Themes\Generic.xaml;
 
 False
 

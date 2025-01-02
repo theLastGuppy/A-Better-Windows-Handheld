@@ -1,32 +1,50 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+     <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
   </PropertyGroup>
+
   <ItemGroup>
-    <Resource Include="Images\navigation_background_dark.png" />
-     <Resource Include="Images\navigation_background_light.png" />
-     <Content Include="Images\ctrl_bttn_LB.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\ctrl_bttn_RB.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-     <Content Include="Images\ctrl_bttn_B.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\ctrl_bttn_A.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\ctrl_bttn_guide.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Page Include="MainWindow.xaml" />
+    <Page Include="Pages\GameOptionsPage.xaml" />
+    <Page Include="Pages\PerformancePage.xaml" />
+    <Page Include="Pages\DiscordPage.xaml" />
+    <Page Include="Pages\RecordingsPage.xaml" />
+    <Page Include="Pages\AchievementsPage.xaml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml" />
 </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Images\navigation_background_dark.png" />
+    <Content Include="Images\navigation_background_light.png" />
+    <Content Include="Images\ctrl_bttn_LB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ctrl_bttn_RB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ctrl_bttn_B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ctrl_bttn_A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ctrl_bttn_guide.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
-
+  <ItemGroup>
+    <PackageReference Include="Microsoft.GameInput" Version="0.2303.22621.3038" />
+    <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,7 @@
+-target net6.0
+-input 7.0
+-input 
+-output "C:\Users\scree\GamingOverlay\obj\Debug\net9.0-windows\Generated Files"
+
+-exclude Windows
+-exclude Microsoft

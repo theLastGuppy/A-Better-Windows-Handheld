@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/navigation_background_dark.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/navigation_background_light.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ctrl_bttn_lb.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ctrl_bttn_rb.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ctrl_bttn_b.png")]
